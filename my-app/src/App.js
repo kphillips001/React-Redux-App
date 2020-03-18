@@ -2,20 +2,22 @@ import React from 'react';
 
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 
 import './App.css';
-import { jokesReducer as reducer } from './reducers/jokesReducer';
+import { virusReducer as reducer } from './reducers/virusReducer';
 
-import JokesForm from './components/JokesForm'; 
+import VirusForm from './components/virusForm'; 
 
-const store = createStore(reducer)
+const store = createStore(reducer, applyMiddleware(thunk));
 
 function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <h1>Hello</h1>
-        <JokesForm />
+        <h1>Corona Virus Cases By Country</h1>
+        
+        <VirusForm />
       </div>
     </Provider>
   );

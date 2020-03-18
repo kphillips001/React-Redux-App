@@ -1,18 +1,26 @@
 import { GET_DATA } from '../actions';
 
 const initialSate = {
-  jokes: [],
+  data: {
+    Countries: []
+  },
   isFetchingData: false
 }; 
 
-export const jokesReducer = ( state = initialSate, action) => {
+export const virusReducer = ( state = initialSate, action) => {
   switch (action.type) {
     case "GET_DATA":
       return {
         ...state,
         isFetchingData: true
       };
+    case "UPDATE_DATA":
+      return {
+        ...state,
+        isFetchingData: false
+      }  
+
     default: 
       return state;
   }
-}
+};

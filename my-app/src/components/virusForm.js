@@ -3,13 +3,12 @@ import {connect} from 'react-redux';
 
 import { getData } from '../actions/index'; 
 
-const JokesForm = props => {
+const VirusForm = props => {
 
   const handleGetData = e => {
     e.preventDefault();
-    props.getData()
-
-  }
+    props.getData();
+  };
 
   return ( 
   <>
@@ -31,4 +30,4 @@ const mapStateToProps = state => {
 export default connect(
   mapStateToProps, 
     { getData },
-)(JokesForm);
+)(VirusForm);
