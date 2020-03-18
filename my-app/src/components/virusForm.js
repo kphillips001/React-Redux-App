@@ -15,7 +15,7 @@ const VirusForm = props => {
     {props.isFetchingData ? (
       <div>we are fetching data</div> 
     ) : (
-      <button onClick={handleGetData}>get jokes</button>
+      <button onClick={handleGetData}>get data</button>
     )}
   </>
   );

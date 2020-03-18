@@ -15,7 +15,7 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <h1>Corona Virus Cases By Country</h1>
+        <h1>Coronavirus Cases By Country</h1>
         
         <VirusForm />
       </div>
