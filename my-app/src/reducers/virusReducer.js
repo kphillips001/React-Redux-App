@@ -1,4 +1,4 @@
-import {GET_DATA, UPDATE_DATA} from '../actions';
+import {GET_DATA, UPDATE_DATA, SET_ERROR} from '../actions';
 
 const initialState = {
     data: {
@@ -19,7 +19,13 @@ export const virusReducer = (state = initialState, action) => {
                 ...state,
                 data: action.payload,
                 isFetchingData: false
-            }
+            };
+        case SET_ERROR:
+          return {
+            ...state,
+            isFetchingData: false,
+            error: action.payload
+          };
             default:
             return state;
     }

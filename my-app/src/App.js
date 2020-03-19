@@ -7,7 +7,8 @@ import thunk from 'redux-thunk';
 import './App.css';
 import { virusReducer as reducer } from './reducers/virusReducer';
 
-import VirusForm from './components/virusForm'; 
+import VirusForm from './components/VirusForm'; 
+import VirusList from './components/VirusList'; 
 
 const store = createStore(reducer, applyMiddleware(thunk));
 
@@ -16,8 +17,8 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <h1>Coronavirus Cases By Country</h1>
-        
         <VirusForm />
+        <VirusList />
       </div>
     </Provider>
   );

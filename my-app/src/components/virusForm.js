@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-
 import { getData } from '../actions/index'; 
+import Button from '@material-ui/core/Button';
 
 const VirusForm = props => {
 
@@ -15,7 +15,13 @@ const VirusForm = props => {
     {props.isFetchingData ? (
       <div>we are fetching data</div> 
     ) : (
-      <button onClick={handleGetData}>get data</button>
+      <Button 
+        onClick={handleGetData}
+        variant="contained"
+        color="primary"
+        >
+          Get Cases
+      </Button>
     )}
   </>
   );
